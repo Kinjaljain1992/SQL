@@ -2,7 +2,7 @@ DATABASE:-A database is an organized collection of data.
 For Example: A university database organizes the data about students, faculty, admin staff, etc.
 
 DBMS(Data Base Management System):- The software which is used to manage databases is called Database Management System. 
-DBMS allows users to create ,read , update and delete data in database.
+• DBMS allows users to create ,read , update and delete data in database.
 For example:
 MySQL, Oracle, Microsoft SQL server, PostgreSQL are the popular commercial DBMS used in different applications.
 
@@ -13,7 +13,8 @@ WHY DBMS?
 • Multi - user access and views
 • Security
 
-DATA MODELS:- Data models define how the logical structure of a database is modelled. Data models define how data is connected to each other ,how they are processed and stored inside the system.
+DATA MODELS:- Data models define how the logical structure of a database is modelled. 
+• Data models define how data is connected to each other ,how they are processed and stored inside the system.
 
 • Hierarchical Model
 • Network Model
@@ -21,7 +22,8 @@ DATA MODELS:- Data models define how the logical structure of a database is mode
 • Relational Model
 • No SQL
 
-RELATIONAL MODEL:-In this model , the data is organized in the form of two dimensional table. That means data is stored in the form of rows and columns.
+RELATIONAL MODEL:-In this model , the data is organized in the form of two dimensional table. 
+• That means data is stored in the form of rows and columns.
 For example:
 The table here shows “STUDENT DETAILS” with attributes such as Stu_Id, Name and Branch which has 5 records.
 Stu_Id         Name         Branch
@@ -42,9 +44,9 @@ MySQL:- MySQL is an open source relational database that uses structured query l
 • Platform-Friendly
   
 
-SQL:- SQL stands for Structured Query Language. SQL is a database programming language designed for the retrieval and management of
-data in a relational database.  All relational database management systems like MySQL ,Oracle , MS Access and SQL
-server uses SQL as their standard database language.
+SQL:- SQL stands for Structured Query Language. 
+• SQL is a database programming language designed for the retrieval and management ofdata in a relational database.  
+• All relational database management systems like MySQL ,Oracle , MS Access and SQL server uses SQL as their standard database language.
 
 WHAT SQL DOES?
 • SQL is used to create new databases and tables.
