@@ -1,0 +1,33 @@
+IMPORT TABLE :-
+
+- Select database
+- Right click
+- Select Table data import wizard
+- Browse to select the file
+- Check on create new table
+- Click next
+- Import
+
+IMPORT DATABASE :-
+
+- Click on Server
+- Select data import
+- Self contained file
+- Open Import progress
+- Start import
+
+EXPORT TABLE :-
+
+- Select Table
+- Right click
+- Select Table data export wizard
+- Browse to select destination
+- Export
+
+EXPORT DATABASE :-
+
+- Click on Server
+- Select data export
+- Select the database
+- Open export progress
+- Start export
