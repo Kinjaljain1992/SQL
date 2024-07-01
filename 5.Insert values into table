@@ -1,0 +1,44 @@
+# Write the query to insert values in the above 'employees' table.
+
+INSERT INTO employees
+(empid , empName , empAge , empAddress , empSalary )
+VALUES  
+(1,'Ram',20,'Indore',20000),
+(2,'Shyam',20,'Mumbai',25000),
+(3,'Ramesh',20,'Delhi',30000),
+(4,'Somesh',20,'Pune',40000),
+(5,'Mahesh',20,'Indore',20000),
+(6,'Sita',20,'Pune',25000)
+(7,'Gita',20,'Banglore',50000),
+(8,'Shivani',20,'Indore',20000),
+(9,'Prateek',20,'Dewas',50000),
+(10,'Ruhi',20,'Mumbai',30000),
+(11,'Lakshya',20,'Indore',20000);
+
+# Write the query to insert values in the above 'users' table.
+#  query to inert single row in a 'users' table-
+
+INSERT INTO users
+(id , name , dob , gender , email , password , contact , address , city , state )
+VALUES
+(1,"John","1990-01-10","M","john@gmail.com","1234",94253626,"126,sanwer road","pune","maharashtra");
+
+#  query to inert multiple rows in a 'users' table-
+
+INSERT INTO users
+(id , name , dob , gender , email , password , contact , address , city , state )
+VALUES
+(2,"nishan","1990-02-15","M","nishan@gmail.com","1334",94235626,"24,phulwani road","punjab","punjab"),
+(3,"hansa","1991-02-20","F","hansa@gmail.com","1354",94235000,"2,wani road","mumbai","maharashtra"),
+(4,"anu","1992-03-15","F","anu@gmail.com","1224",94235611,"245,pune road","mumbai","maharashtra"),
+(5,"ishani","1997-02-25","F","ishani@gmail.com","3345",87235626,"1,link road","indore","mp"),
+(6,"shan","1993-02-15","M","shan@gmail.com","1333",94235333,"24,wani road","ujjain","mp"),
+(7,"nitin","1990-11-15","M","nitin@gmail.com","1224",94222626,"24,bhawani road","surat","gujrat"),
+(8,"bhanu","1997-12-12","M","bhan@gmail.com","1322",94235622,"4,indore road","ujjain","mp"),
+(9,"anjali","1992-02-15","F","an@gmail.com","2534",81735626,"101,ganesh road","kutch","gujrat"),
+(10,"shanvi","1990-01-17","F","shanvi@gmail.com","1344",9425555,"54,patil road","pune","maharashtra"),
+(11,"nitin","1995-04-25","M","nitin@gmail.com","2224",88835626,"01,phulwa road","wadgao","up"),
+(12,"ira","1999-02-15","F","ira@gmail.com","2222",9423777,"7,subhash road","mumbai","maharashtra"),
+(13,"irani","1996-02-15","F","irani@gmail.com","1322",8623777,"7,shah road","jaipur","rajasthan"),
+(14,"raja","1999-12-05","M","raja@gmail.com","4422",7423777,"7,asha road","chennai","tamil nadu"),
+(15,"rani","1992-02-13","F","rani@gmail.com","5522",7426777,"7,bhashu road","Delhi","up");
