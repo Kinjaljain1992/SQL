@@ -1,0 +1,32 @@
+#Update values in table:-
+The update command is used to update existing rows in a table
+
+#Consider the 'employees' table and write the query to update the age of 'empId=5' in the 'employees' table:
+UPDATE employees
+SET empAge=25
+WHERE empId=5;
+
+#Consider the 'employees' table and write the query to update the salary of 'empId=9' in the 'employees' table:
+UPDATE employees
+SET empSalary=60000
+WHERE empId=9;
+
+#Consider the 'employees' table and write the query to update the address of 'empName=Sita' in the 'employees' table:
+UPDATE employees
+SET empAddress="Goa"
+WHERE empName="Sita";
+
+#Consider the 'users' table and write the query to update the password of 'id=5' in the 'users' table:
+UPDATE users
+SET password=3333
+WHERE id=5;
+
+#Consider the 'users' table and write the query to update the address of 'name=shan' in the 'users' table:
+UPDATE users
+SET address="10,nani road"
+WHERE name="Shan";
+
+#Consider the 'users' table and write the query to update the name of 'id=14' in the 'users' table:
+UPDATE users
+SET name="rajan"
+WHERE id=14;
