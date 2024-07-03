@@ -1,0 +1,30 @@
+# DELETE Values from table
+The delete statement is used to delete existing records in a table using where condition.
+
+SYNTAX: 
+DELETE FROM table_name
+WHERE <condition>;
+
+#Consider the 'employees' table and write the query to delete record of 'empId=10' from the 'employees' table:
+DELETE FROM employees
+WHERE empId=10;
+
+#Consider the 'employees' table and write the query to delete record of 'empName=Gita' from the 'employees' table:
+DELETE FROM employees
+WHERE empName='Gita';
+
+#Consider the 'employees' table and write the query to delete record of 'empId=5' from the 'employees' table:
+DELETE FROM employees
+WHERE empId=5;
+
+#Consider the 'users' table and write the query to delete the record of 'id=5' from the 'users' table:
+DELETE FROM users
+WHERE id=5;
+
+#Consider the 'users' table and write the query to delete the record of name='shanvi' from the 'users' table:
+DELETE FROM users
+WHERE  name='shanvi';
+
+#Consider the 'users' table and write the query to delete the record of  address="2,wani road" from the 'users' table:
+DELETE FROM users
+WHERE address="2,wani road";
