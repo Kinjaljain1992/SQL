@@ -1,6 +1,11 @@
 #Update values in table:-
 The update command is used to update existing rows in a table
 
+SYNTAX:
+UPDATE table_name
+SET column_name1=value1 , column_name2=value2
+WHERE <condition>;
+
 #Consider the 'employees' table and write the query to update the age of 'empId=5' in the 'employees' table:
 UPDATE employees
 SET empAge=25
