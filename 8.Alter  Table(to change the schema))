@@ -1,0 +1,36 @@
+Alter Table :-
+The alter table statement is used to add , delete or modify columns in an existing table.
+1) Add : It is used to add new column to the table.
+SYNTAX:    ALTER TABLE < table name > 
+           ADD < column name > < data type > ;
+
+#Add new column emp_experience-
+ALTER TABLE employee
+ADD emp_experience int;
+
+2) DROP : Used to drop existing column from the table.
+Syntax:     ALTER TABLE < table name > 
+            DROP COLUMN < column name > ;
+
+# Delete "emp_experience" column from the table "employee"-
+ALTER TABLE employee
+ADD column emp_experience ;
+
+3) MODIFY : Used to modify data type of column.
+SYNTAX:      ALTER TABLE < table name > 
+             MODIFY < column name > < data type > ;
+
+# Modify datatype of emp_names as varchar(50)-
+ALTER TABLE employee
+MODIFY emp_name varchar(50) ;
+
+4) RENAME : Used to rename the existing column name.
+SYNTAX:      ALTER TABLE < table name > 
+            RENAME COLUMN < old_column_name > to <new_column_name> ;
+
+# Rename column "emp_name" as "employee_name"-
+ALTER TABLE employee
+RENAME COLUMN emp_name
+to employee_name ;
+RENAME
+
