@@ -1,0 +1,32 @@
+SELECT STATEMENT :-
+It is used to fetch all the records from the table or to fetch subset of columns.
+
+SYNTAX : SELECT <column1>, < column2 > FROM < table name > ;
+         SELECT < * > FROM < table name > ;
+
+# Consider the 'employees' table and write the query to select all records from the 'employees' table:
+  SELECT * FROM employees;
+  
+# Consider the 'employees' table and write the query to select the 'empName' and 'empSalary' columns from the 'employees' table:
+  SELECT empName , empSalary FROM employees;
+
+# Consider the 'cubix' table and write the query to select all records from the 'cubix' table:
+  SELECT * FROM cubix;
+
+# Consider the 'cubix' table and write the query to select name, address, state columns from the 'cubix' table:
+  SELECT name , address , state FROM cubix;
+
+SELECT DISTINCT : 
+Used to fetch unique records from the table.
+
+SYNTAX : SELECT <distinct(column1)> FROM < table name > ;
+
+# Consider the 'employees' table and write the query to select distinct values from the 'empAddress' column in the 'employees' table:
+SELECT DISTINCT empAddress FROM employees;
+
+#Consider the 'cubix' table and write the query to select distinct values from the 'city' column in the 'cubix' table:
+SELECT DISTINCT city FROM users;
+
+#Consider the 'cubix' table and write the query to select distinct values from the 'state' column in the 'cubix' table:
+SELECT DISTINCT state FROM users;
+
