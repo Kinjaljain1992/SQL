@@ -1,0 +1,58 @@
+WHERE CLAUSE : 
+Used to filter records based on condition.
+
+SYNTAX : SELECT column1, column2, ...
+         FROM table_name
+         WHERE condition;
+
+Note: The WHERE clause is not only used in SELECT statements, it is also used in UPDATE, DELETE, etc.
+
+# Operators in SQL : (The SQL reserved words & characters are called operators,which are used with a WHERE Clause in a SQL Query)
+
+List of Operators that Can be Used with WHERE Clause :
+
+Operator	                              Description
+>	                                      Greater Than
+>=	                                    Greater than or Equal to
+<	                                      Less Than
+<=	                                    Less than or Equal to
+=                                      	Equal to
+!=	                                    Not Equal to
+BETWEEN	                                In an inclusive Range
+LIKE	                                  Search for a pattern
+IN	                                    To specify multiple possible values for a column
+
+#Consider the 'employees' table and write the query to filter and select those records where empAddress='Indore' using a WHERE clause:
+
+SELECT * FROM employees
+WHERE empAddress='Indore';
+
+#Consider the 'users' table and write the query to filter and select the 'name' where state='maharashtra' using a WHERE clause:
+SELECT name FROM users WHERE state="maharashtra";
+
+#Consider the 'users' table and write the query to filter and select the 'city' where state='mp' using a WHERE clause:
+SELECT city FROM users WHERE state="mp";
+
+#Consider the 'users' table and write the query to filter and select the 'name' where state='mp' and city='ujjain' using a WHERE clause:
+SELECT name FROM users WHERE state="mp" AND city="ujjain";
+
+#Consider the 'users' table and write the query to filter and select the 'name' where gender='M' using a WHERE clause:
+SELECT name FROM users WHERE gender="M";
+
+#Consider the 'users' table and write the query to filter and select the 'name' where state='mp' or state='up' using a WHERE clause:
+SELECT name FROM users WHERE state="mp" OR  state= "up";
+
+#Consider the 'users' table and write the query to filter and select the 'name' where id>10 using a WHERE clause:
+SELECT name FROM users WHERE id>10;
+
+#Consider the 'users' table and write the query to filter and select the 'name' where id between 3 and 5 using a WHERE clause:
+SELECT name FROM users WHERE id BETWEEN 3 AND 5;
+
+#Consider the 'users' table and write the query to filter and select 'id' ,'name' ,'gender' , 'contact' where city in 'pune' , 'mumbai' using a WHERE clause:
+SELECT id,name,gender,contact FROM users WHERE city IN ("pune","mumbai") ;
+
+#Consider the 'users' table and write the query to filter and select 'name' , 'address' , 'state' where state's name starts with 'm' using a WHERE clause:
+SELECT name,address,state FROM users WHERE state LIKE "m%" ;
+
+#Consider the 'users' table and write the query to filter and select 'name' , 'address' , 'state' where state's name end with 'p' using a WHERE clause:
+SELECT name,address,state FROM users WHERE state LIKE "%p" ;
