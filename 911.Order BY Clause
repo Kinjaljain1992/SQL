@@ -1,0 +1,33 @@
+#ORDER BY Clause :
+It is used to sort the records in ascending or descending orders.
+
+SYNTAX : SELECT * FROM < table name > 
+        where <condition >
+        order by <column> asc/desc ;
+
+
+# Consider the 'employees' table and write the query to sort all records of the 'employees'  in descending order.
+SELECT * FROM employees
+ORDER BY empName Desc;
+
+#Consider the 'employees' table and write the query to sort all records by the Salary  in ascending order.
+SELECT * FROM employees
+ORDER BY empSalary Asc;
+
+#Consider the 'employees' table and write the query to sort records by the age in ascending order.
+SELECT * FROM employees
+ORDER BY empAge ;
+
+#Consider the 'users' table and write the query to sort records by the id whose state is mp in descending order.
+SELECT name FROM users WHERE state="mp"
+ORDER BY id desc;
+
+#Consider the 'users' table and write the query to sort records by the id  in descending order.
+SELECT name FROM users
+ORDER BY id desc;
+
+
+
+
+SELECT name FROM users WHERE gender="F"
+ORDER BY id desc;
