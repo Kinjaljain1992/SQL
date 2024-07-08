@@ -1,0 +1,23 @@
+LIMIT :
+It is used to return the specified number of records.
+The LIMIT clause is useful on large tables with thousands of records. 
+Returning a large number of records can impact performance.
+
+SYNTAX : SELECT * FROM < table name >
+         WHERE <condition> 
+         LIMIT <value> ;
+
+# selects the first three records from the "users" table, whose grnder is "M" -
+SELECT * FROM users 
+WHERE gender="M"
+limit 3;
+
+# selects the first two records from the "users" table, where the state is "maharashtra":
+SELECT * FROM users 
+WHERE state="maharashtra"
+limit 2;
+
+# selects the first four records from the "users" table, where the gender is "F"
+SELECT id , name, contact FROM users 
+WHERE gender="F"
+limit 4;
