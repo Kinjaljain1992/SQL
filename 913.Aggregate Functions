@@ -1,0 +1,60 @@
+AGGREGATE FUNCTIONS : 
+SQL aggregate functions are used to perform the calculations on multiple rows of a single column
+and returns a single value.
+
+TYPES OF AGGREGATE FUNCTIONS ARE:
+• Count()
+• Sum()
+• Avg()
+• Min()
+• Max()
+
+COUNT : Used to return number of rows in a table.
+
+SYNTAX- SELECT COUNT(*) FROM table_name WHERE <condition>;
+        SELECT COUNT(column1) FROM table_name WHERE <condition>;
+
+#Consider the 'employees' table and write the query to count the number of rows in the 'employees' table.
+SELECT COUNT(*) FROM employees;
+
+AVG() : Used to find average value of numeric column .
+SYNTAX- SELECT AVG(column_name) FROM table_name WHERE<condition>;
+
+#Write the query to calculate the average value of the 'empSalary' column in the employees table
+SELECT AVG(empSalary) FROM employees;
+
+SUM() : Used to find total sum of column .
+SYNTAX- SELECT SUM(column_name) FROM <table_name> WHERE <condition>;
+
+#Write the query to calculate the sum of values in the 'empSalary' column in the employees table
+SELECT SUM(empSalary) from employees;
+
+MIN() : Used to find smallest value in selected column .
+SYNTAX- SELECT MIN(column_name) FROM table_name WHERE <condition>;
+
+#Write the query to retrieve the minimum value from the 'empSalary' column in the employees table
+SELECT MIN(empSalary) FROM employees;
+
+MAX() : Used to find largest value in selected column
+SYNTAX- SELECT MAX(column_name) FROM table_name WHERE <condition>;
+
+#Write the query to retrieve the maximumvalue from the 'empSalary' column in the employees table
+SELECT MAX(empSalary) FROM employees;
+
+
+#Write the query to group records and calculate aggregate functions for the 'empSalary' column in the employees table
+SELECT empSalary , COUNT(empSalary)
+FROM employees
+GROUP BY empSalary;
+
+#Write the query to select all empnames whose average is greater than 30000 from the 'empSalary' column in the employees table
+SELECT empName , AVG(empSalary)
+FROM employees
+GROUP BY empName
+HAVING AVG(empSalary)>30000;
+
+#Write the query to select all employee names whose sum is smaller than 30000 from the 'empSalary' column in the employees table
+SELECT empName , AVG(empSalary)
+FROM employees
+GROUP BY empName
+HAVING AVG(empSalary)<30000;
