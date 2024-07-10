@@ -1,0 +1,31 @@
+GROUP BY : The group by statement in SQL is used to arrange identical data into groups with the help of
+aggregate functions.
+
+GROUP BY SINGLE COLUMN : 
+SYNTAX : SELECT column1 , function(column2) FROM <table_name> 
+         GROUP BY <column1>
+         ORDER BY <column1>;
+
+#Write the query to group records and calculate aggregate functions for the 'empSalary' column in the employees table
+SELECT empSalary , COUNT(empSalary)
+FROM employees
+GROUP BY empSalary;
+
+#Write the query to group records and calculate aggregate functions for the 'empSalary' column in the employees table
+SELECT empName , AVG(empSalary)
+FROM employees
+GROUP BY empName
+
+#Determine the distibution of orders by hour of the day
+SELECT 
+    HOUR(order_time) AS hours, COUNT(order_id) AS order_count
+FROM
+    orders
+GROUP BY HOUR(order_time);
+
+#Join relevant tables to find the category-wise distribution of pizzas.
+SELECT 
+    category, COUNT(name)
+FROM
+    pizza_types
+GROUP BY category;
