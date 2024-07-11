@@ -1,0 +1,22 @@
+HAVING CLAUSE : Having clause is used to filter the result obtained by the group by clause based on specific
+condition.
+
+SYNTAX : SELECT column1 ,function(column2) FROM <table_name> 
+         GROUP BY <column1 ,column2>
+         HAVING <condition> 
+         ORDER BY <column1, column2>;
+
+#Write the query to select all empnames whose average is greater than 30000 from the 'empSalary' column in the employees table
+SELECT empName , AVG(empSalary)
+FROM employees
+GROUP BY empName
+HAVING AVG(empSalary)>30000;
+
+#Write the query to select all employee names whose sum is smaller than 30000 from the 'empSalary' column in the employees table
+SELECT empName , AVG(empSalary)
+FROM employees
+GROUP BY empName
+HAVING AVG(empSalary)<30000;       
+
+
+
