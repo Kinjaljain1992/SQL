@@ -1,0 +1,33 @@
+SUBQUERY : 
+SQL subquery is a query within another SQL query. Subquery is used to fetch data from two tables.
+• Subquery must be enclosed within parenthesis.
+• Order by cannot be used in a subquery.
+• Between operator cannot be used.
+• A subquery can have only single column in subquery.
+
+# Executes subquery first, Find minimum sales from customers
+ Executes outerquery , select rows whery sales is equal to result of subquery
+ 
+SELECT * FROM customers WHERE sales= (SELECT MIN(sales) FROM customers);
+
+-- use a subquery to select the first name of customer
+-- with the highest age
+
+SELECT first_name
+FROM Customers
+WHERE age= (
+    -- subquery
+    SELECT MAX(age)
+    FROM CUSTOMERS
+);
+
+-- select all the rows from the Customers table
+-- with the minimum age
+
+SELECT *
+FROM Customers
+WHERE age = (
+  SELECT MIN(age)
+  FROM Customers
+);
+
