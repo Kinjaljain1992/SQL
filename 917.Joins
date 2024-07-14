@@ -62,3 +62,14 @@ union
 select e.empid,e.ename,e.salary,d.depid,d.dname
 from employee as e right join department as d
 on e.depid=d.depid;
+
+SELF JOIN :
+A self join is a regular join which helps you to join a table to itself
+
+SYNTAX : SELECT column_name(s) FROM table1 T1, table T2 
+         WHERE <condition> ;
+
+CROSS JOIN :
+The cross join returns all the records from both the tables.
+
+SYNTAX : SELECT column_name(s) FROM <Table 1> CROSS JOIN <Table 2>;
