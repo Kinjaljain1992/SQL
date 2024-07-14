@@ -1,0 +1,64 @@
+JOINS : 
+SQL Joins are used combine two tables based on common column, and selects records that have matching
+values in these columns.
+
+Types of Joins in SQL
+• INNER JOINS
+• LEFT JOIN
+• Right join
+• Full outer join
+
+INNER JOIN : 
+Inner join return those records which a have matching values in both tables.
+
+SYNTAX : SELECT <column_names> FROM Table1
+        INNER JOIN Table2
+        ON Table1.matching_column=Table2.matching_column ;
+
+select e.empid,e.ename,e.salary,d.depid,d.dname
+from employee as e inner join department as d
+on e.depid=d.depid;
+
+LEFT JOIN : 
+Left join returns all the records from left table and also matching records from right table.
+
+SYNTAX : SELECT <column_names> FROM Table1
+         LEFT JOIN Table2
+         ON Table1.matching_column=Table2.matching_column ;
+
+select e.empid,e.ename,e.salary,d.depid,d.dname
+from employee as e left join department as d
+on e.depid=d.depid;
+
+RIGHT JOIN : 
+Right join returns all the records from right table and also
+matching records from left table.
+
+SYNTAX : SELECT <column_names> FROM Table1
+         RIGHT JOIN Table2
+         ON Table1.matching_column=Table2.matching_column ;
+
+select e.empid,e.ename,e.salary,d.depid,d.dname
+from employee as e right join department as d
+on e.depid=d.depid;
+
+FULL OUTER JOIN :
+Full outer join returns all the matching records from
+both the tables.
+
+
+SYNTAX : SELECT <column_names> FROM Table1
+         LEFT JOIN Table2
+         ON Table1.matching_column=Table2.matching_column
+         UNION
+         SELECT <column_names> FROM Table1
+         RIGHT JOIN Table2
+         ON Table1.matching_column=Table2.matching_column ;
+
+select e.empid,e.ename,e.salary,d.depid,d.dname
+from employee as e left join department as d
+on e.depid=d.depid
+union
+select e.empid,e.ename,e.salary,d.depid,d.dname
+from employee as e right join department as d
+on e.depid=d.depid;
