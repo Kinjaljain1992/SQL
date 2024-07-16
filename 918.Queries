@@ -1,0 +1,109 @@
+#Write the query to create a database named 'Company'
+CREATE DATABASE Company;
+
+#Write the query to use the database 'Company'
+USE Company;
+
+#Write the query to create a table named 'employees'
+CREATE TABLE employees(
+empid INT PRIMARY KEY,
+empName VARCHAR(50),
+empAge INT,
+empAddress VARCHAR(50),
+empSalary INT 
+);
+
+# Write the query to insert values in the above 'employees' table.
+INSERT INTO employees
+VALUES  (1,'Ram',20,'Indore',20000),
+		(2,'Shyam',20,'Mumbai',25000),
+		(3,'Ramesh',20,'Delhi',30000),
+		(4,'Somesh',20,'Pune',40000),
+		(5,'Mahesh',20,'Indore',20000),
+		(6,'Sita',20,'Pune',25000),
+		(7,'Gita',20,'Banglore',50000),
+        (8,'Shivani',20,'Indore',20000),
+        (9,'Prateek',20,'Dewas',50000),
+        (10,'Ruhi',20,'Mumbai',30000);
+
+#Consider the 'employees' table and write the query to select all records from the 'employees' table:
+SELECT * FROM employees;
+
+#Consider the 'employees' table and write the query to delete record of 'empId=10' from the 'employees' table:
+DELETE FROM employees
+WHERE empId=10;
+
+#Consider the 'employees' table and write the query to update the age of 'empId=5' in the 'employees' table:
+UPDATE employees
+SET empAge=25
+WHERE empId=5;
+
+#Consider the 'employees' table and write the query to update the salary of 'empId=5' in the 'employees' table:
+UPDATE employees
+SET empSalary=60000
+WHERE empId=9;
+
+#Consider the 'employees' table and write the query to update the address of 'empName=Sita' in the 'employees' table:
+UPDATE employees
+SET empAddress="Goa"
+WHERE empName="Sita";
+
+#Consider the 'employees' table and write the query to select the 'empName' and 'empSalary' columns from the 'employees' table:
+SELECT empName , empSalary FROM employees;
+
+#Consider the 'employees' table and write the query to select distinct values from the 'empAddress' column in the 'employees' table:
+SELECT DISTINCT empAddress FROM employees;
+
+#Consider the 'employees' table and write the query to filter and select those records where empAddress='Indore' using a WHERE clause:
+SELECT * FROM employees
+WHERE empAddress='Indore';
+
+# Consider the 'employees' table and write the query to sort records of the 'employees'  in descending order.
+SELECT * FROM employees
+ORDER BY empName Desc;
+
+#Consider the 'employees' table and write the query to sort records by the Salary  in ascending order.
+SELECT * FROM employees
+ORDER BY empSalary Asc;
+
+#Consider the 'employees' table and write the query to count the number of rows in the 'employees' table.
+SELECT COUNT(*) FROM employees;
+
+#Consider the 'employees' table and write the query to retrieve all employees whose salary is between 35000 and 60000 in the 'employees' table.
+SELECT empName,empSalary FROM employees
+WHERE empSalary BETWEEN 35000 AND 60000; 
+
+#Consider the 'employees' table and write the query to add another column called 'Department'
+ALTER TABLE employees
+ADD COLUMN Department VARCHAR(50);
+
+#Write the query to calculate the sum of values in the 'empSalary' column in the employees table
+SELECT SUM(empSalary) from employees;
+
+#Write the query to calculate the average value of the 'empSalary' column in the employees table
+SELECT AVG(empSalary) FROM employees;
+
+#Write the query to retrieve the minimum value from the 'empSalary' column in the employees table
+SELECT MIN(empSalary) FROM employees;
+
+#Write the query to retrieve the maximumvalue from the 'empSalary' column in the employees table
+SELECT MAX(empSalary) FROM employees;
+
+#Write the query to group records and calculate aggregate functions for the 'empSalary' column in the employees table
+SELECT empSalary , COUNT(empSalary)
+FROM employees
+GROUP BY empSalary;
+
+#Write the query to select all empnames whose average is greater than 30000 from the 'empSalary' column in the employees table
+SELECT empName , AVG(empSalary)
+FROM employees
+GROUP BY empName
+HAVING AVG(empSalary)>30000;
+
+#Write the query to select all employee names whose sum is smaller than 30000 from the 'empSalary' column in the employees table
+SELECT empName , AVG(empSalary)
+FROM employees
+GROUP BY empName
+HAVING AVG(empSalary)<30000;       
+
+
